@@ -30,8 +30,8 @@ const RegisterPage = () => {
           <p>
             Already have account? <NavLink to="/login">Sing in</NavLink>
           </p>
+          <NavLink to="/">Back to home</NavLink>
         </Form>
-        <NavLink to="/">Back to home</NavLink>
       </Formik>
     </div>
   );

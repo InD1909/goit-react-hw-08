@@ -32,8 +32,8 @@ const LoginPage = () => {
           <p>
             Don't have account? <NavLink to="/register">Sing up</NavLink>
           </p>
+          <NavLink to="/">Back to home</NavLink>
         </Form>
-        <NavLink to="/">Back to home</NavLink>
       </Formik>
     </div>
   );
