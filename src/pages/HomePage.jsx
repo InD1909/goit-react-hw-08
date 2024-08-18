@@ -10,7 +10,7 @@ export const HomePage = () => {
     return (
       <div>
         <h2>CONTACTIO</h2>
-        <p>{user.name}, this is your contact book </p>
+        <p>Welcome {user.name}, this is your contact book </p>
         <NavLink to="/contacts">Enter</NavLink>
       </div>
     );

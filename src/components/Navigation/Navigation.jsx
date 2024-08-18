@@ -19,7 +19,6 @@ const Navigation = () => {
             <li>
               <NavLink to="contacts">Contacts</NavLink>
             </li>
-            <h2>Welcome {user.name}</h2>
 
             {!isLoggedIn && (
               <>
@@ -32,9 +31,14 @@ const Navigation = () => {
               </>
             )}
             {isLoggedIn && (
-              <li>
-                <button onClick={() => dispatch(logoutThunk())}>Exit</button>
-              </li>
+              <>
+                <li>
+                  <h2>{user.name}</h2>
+                </li>
+                <li>
+                  <button onClick={() => dispatch(logoutThunk())}>Exit</button>
+                </li>
+              </>
             )}
           </ul>
         </nav>
