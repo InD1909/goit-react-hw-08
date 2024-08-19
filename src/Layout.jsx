@@ -1,11 +1,14 @@
+import AppBar from "./components/AppBar/AppBar";
+
 import { Outlet } from "react-router-dom";
-import Navigation from "./components/Navigation/Navigation";
 
 const Layout = () => {
   return (
     <div>
-      <Navigation />
-      <Outlet />
+      <AppBar />
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { selectIsLoggedIn, selectUser } from "../redux/auth/selectors";
-import ContactsPage from "./ContactsPage";
 
 export const HomePage = () => {
   const user = useSelector(selectUser);

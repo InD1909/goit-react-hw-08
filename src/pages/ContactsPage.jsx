@@ -9,15 +9,11 @@ import {
 } from "../redux/contacts/operations";
 import { changeFilter, selectNameFilter } from "../redux/filters/slice";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  selectContacts,
-  selectError,
-  selectLoading,
-} from "../redux/contacts/slice";
+import { selectError, selectLoading } from "../redux/contacts/selectors";
+import Loader from "../components/Loader/Loader";
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(selectContacts);
   const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
   const filter = useSelector(selectNameFilter);
@@ -41,7 +37,7 @@ const ContactsPage = () => {
     <div>
       <ContactForm onAddContact={handleAddContact} />
       <SearchBox filter={filter} onFilter={handleFilterChange} />
-      {loading && <p>Loading contacts...</p>}
+      {loading && <Loader />}
       {error && <p>Error: {error}</p>}
       <ContactList onDelete={handleDeleteContact} />
     </div>
